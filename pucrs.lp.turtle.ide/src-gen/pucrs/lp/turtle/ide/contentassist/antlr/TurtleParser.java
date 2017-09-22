@@ -35,9 +35,15 @@ public class TurtleParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
-					put(grammarAccess.getCommandAccess().getGroup(), "rule__Command__Group__0");
+					put(grammarAccess.getCommandAccess().getAlternatives(), "rule__Command__Alternatives");
+					put(grammarAccess.getFowardAccess().getGroup(), "rule__Foward__Group__0");
+					put(grammarAccess.getRotateAccess().getGroup(), "rule__Rotate__Group__0");
+					put(grammarAccess.getRepeatAccess().getGroup(), "rule__Repeat__Group__0");
 					put(grammarAccess.getModelAccess().getCommandsAssignment(), "rule__Model__CommandsAssignment");
-					put(grammarAccess.getCommandAccess().getValueAssignment_1(), "rule__Command__ValueAssignment_1");
+					put(grammarAccess.getFowardAccess().getValueAssignment_1(), "rule__Foward__ValueAssignment_1");
+					put(grammarAccess.getRotateAccess().getValueAssignment_1(), "rule__Rotate__ValueAssignment_1");
+					put(grammarAccess.getRepeatAccess().getValueAssignment_1(), "rule__Repeat__ValueAssignment_1");
+					put(grammarAccess.getRepeatAccess().getCommandsAssignment_3(), "rule__Repeat__CommandsAssignment_3");
 				}
 			};
 		}

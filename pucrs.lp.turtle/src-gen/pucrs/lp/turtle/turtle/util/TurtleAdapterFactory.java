@@ -86,6 +86,21 @@ public class TurtleAdapterFactory extends AdapterFactoryImpl
         return createCommandAdapter();
       }
       @Override
+      public Adapter caseFoward(Foward object)
+      {
+        return createFowardAdapter();
+      }
+      @Override
+      public Adapter caseRotate(Rotate object)
+      {
+        return createRotateAdapter();
+      }
+      @Override
+      public Adapter caseRepeat(Repeat object)
+      {
+        return createRepeatAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -133,6 +148,51 @@ public class TurtleAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createCommandAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link pucrs.lp.turtle.turtle.Foward <em>Foward</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see pucrs.lp.turtle.turtle.Foward
+   * @generated
+   */
+  public Adapter createFowardAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link pucrs.lp.turtle.turtle.Rotate <em>Rotate</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see pucrs.lp.turtle.turtle.Rotate
+   * @generated
+   */
+  public Adapter createRotateAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link pucrs.lp.turtle.turtle.Repeat <em>Repeat</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see pucrs.lp.turtle.turtle.Repeat
+   * @generated
+   */
+  public Adapter createRepeatAdapter()
   {
     return null;
   }

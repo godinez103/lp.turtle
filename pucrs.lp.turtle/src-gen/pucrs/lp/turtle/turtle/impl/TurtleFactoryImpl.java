@@ -67,6 +67,9 @@ public class TurtleFactoryImpl extends EFactoryImpl implements TurtleFactory
     {
       case TurtlePackage.MODEL: return createModel();
       case TurtlePackage.COMMAND: return createCommand();
+      case TurtlePackage.FOWARD: return createFoward();
+      case TurtlePackage.ROTATE: return createRotate();
+      case TurtlePackage.REPEAT: return createRepeat();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -92,6 +95,39 @@ public class TurtleFactoryImpl extends EFactoryImpl implements TurtleFactory
   {
     CommandImpl command = new CommandImpl();
     return command;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Foward createFoward()
+  {
+    FowardImpl foward = new FowardImpl();
+    return foward;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Rotate createRotate()
+  {
+    RotateImpl rotate = new RotateImpl();
+    return rotate;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Repeat createRepeat()
+  {
+    RepeatImpl repeat = new RepeatImpl();
+    return repeat;
   }
 
   /**

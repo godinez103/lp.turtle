@@ -11,6 +11,7 @@ import org.junit.Assert
 import org.junit.Test
 import org.junit.runner.RunWith
 import pucrs.lp.turtle.turtle.Model
+import org.junit.experimental.results.PrintableResult
 
 @RunWith(XtextRunner)
 @InjectWith(TurtleInjectorProvider)
@@ -20,11 +21,40 @@ class TurtleParsingTest{
 	ParseHelper<Model> parseHelper
 	
 	@Test
-	def void testFoward(){
+	def void testFd(){
 		val result = parseHelper.parse('''
 			fd 30
 		''')
 		Assert.assertNotNull(result)
+		Assert.assertEquals(0, result.eResource.errors.size)
 	}
+	
+	@Test
+	def void testFdRt(){
+		val result = parseHelper.parse('''
+			fd 30 rt 60
+		''')
+		Assert.assertNotNull(result)
+		Assert.assertEquals(0, result.eResource.errors.size)
+	}
+	
+	@Test 
+	def void testRt(){
+		val result = parseHelper.parse('''
+		rt 90
+		''')
+		Assert.assertNotNull(result)
+		Assert.assertEquals(0, result.eResource.errors.size)
+	}
+	
+	@Test
+	def void testRepeat(){
+		val result = parseHelper.parse('''
+		repeat 3 [fd 60 rt 30]
+		''')
+		Assert.assertNotNull(result)
+		Assert.assertEquals(0, result.eResource.errors.size)
+	}
+	
 
 }

@@ -87,6 +87,30 @@ public class TurtleSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case TurtlePackage.FOWARD:
+      {
+        Foward foward = (Foward)theEObject;
+        T result = caseFoward(foward);
+        if (result == null) result = caseCommand(foward);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TurtlePackage.ROTATE:
+      {
+        Rotate rotate = (Rotate)theEObject;
+        T result = caseRotate(rotate);
+        if (result == null) result = caseCommand(rotate);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case TurtlePackage.REPEAT:
+      {
+        Repeat repeat = (Repeat)theEObject;
+        T result = caseRepeat(repeat);
+        if (result == null) result = caseCommand(repeat);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       default: return defaultCase(theEObject);
     }
   }
@@ -119,6 +143,54 @@ public class TurtleSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseCommand(Command object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Foward</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Foward</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFoward(Foward object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Rotate</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Rotate</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRotate(Rotate object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Repeat</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Repeat</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRepeat(Repeat object)
   {
     return null;
   }

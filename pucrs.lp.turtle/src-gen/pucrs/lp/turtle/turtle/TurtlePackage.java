@@ -113,6 +113,99 @@ public interface TurtlePackage extends EPackage
    */
   int COMMAND_FEATURE_COUNT = 1;
 
+  /**
+   * The meta object id for the '{@link pucrs.lp.turtle.turtle.impl.FowardImpl <em>Foward</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see pucrs.lp.turtle.turtle.impl.FowardImpl
+   * @see pucrs.lp.turtle.turtle.impl.TurtlePackageImpl#getFoward()
+   * @generated
+   */
+  int FOWARD = 2;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOWARD__VALUE = COMMAND__VALUE;
+
+  /**
+   * The number of structural features of the '<em>Foward</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOWARD_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link pucrs.lp.turtle.turtle.impl.RotateImpl <em>Rotate</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see pucrs.lp.turtle.turtle.impl.RotateImpl
+   * @see pucrs.lp.turtle.turtle.impl.TurtlePackageImpl#getRotate()
+   * @generated
+   */
+  int ROTATE = 3;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ROTATE__VALUE = COMMAND__VALUE;
+
+  /**
+   * The number of structural features of the '<em>Rotate</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ROTATE_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link pucrs.lp.turtle.turtle.impl.RepeatImpl <em>Repeat</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see pucrs.lp.turtle.turtle.impl.RepeatImpl
+   * @see pucrs.lp.turtle.turtle.impl.TurtlePackageImpl#getRepeat()
+   * @generated
+   */
+  int REPEAT = 4;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REPEAT__VALUE = COMMAND__VALUE;
+
+  /**
+   * The feature id for the '<em><b>Commands</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REPEAT__COMMANDS = COMMAND_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Repeat</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REPEAT_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 1;
+
 
   /**
    * Returns the meta object for class '{@link pucrs.lp.turtle.turtle.Model <em>Model</em>}'.
@@ -155,6 +248,47 @@ public interface TurtlePackage extends EPackage
    * @generated
    */
   EAttribute getCommand_Value();
+
+  /**
+   * Returns the meta object for class '{@link pucrs.lp.turtle.turtle.Foward <em>Foward</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Foward</em>'.
+   * @see pucrs.lp.turtle.turtle.Foward
+   * @generated
+   */
+  EClass getFoward();
+
+  /**
+   * Returns the meta object for class '{@link pucrs.lp.turtle.turtle.Rotate <em>Rotate</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Rotate</em>'.
+   * @see pucrs.lp.turtle.turtle.Rotate
+   * @generated
+   */
+  EClass getRotate();
+
+  /**
+   * Returns the meta object for class '{@link pucrs.lp.turtle.turtle.Repeat <em>Repeat</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Repeat</em>'.
+   * @see pucrs.lp.turtle.turtle.Repeat
+   * @generated
+   */
+  EClass getRepeat();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link pucrs.lp.turtle.turtle.Repeat#getCommands <em>Commands</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Commands</em>'.
+   * @see pucrs.lp.turtle.turtle.Repeat#getCommands()
+   * @see #getRepeat()
+   * @generated
+   */
+  EReference getRepeat_Commands();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -214,6 +348,44 @@ public interface TurtlePackage extends EPackage
      * @generated
      */
     EAttribute COMMAND__VALUE = eINSTANCE.getCommand_Value();
+
+    /**
+     * The meta object literal for the '{@link pucrs.lp.turtle.turtle.impl.FowardImpl <em>Foward</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see pucrs.lp.turtle.turtle.impl.FowardImpl
+     * @see pucrs.lp.turtle.turtle.impl.TurtlePackageImpl#getFoward()
+     * @generated
+     */
+    EClass FOWARD = eINSTANCE.getFoward();
+
+    /**
+     * The meta object literal for the '{@link pucrs.lp.turtle.turtle.impl.RotateImpl <em>Rotate</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see pucrs.lp.turtle.turtle.impl.RotateImpl
+     * @see pucrs.lp.turtle.turtle.impl.TurtlePackageImpl#getRotate()
+     * @generated
+     */
+    EClass ROTATE = eINSTANCE.getRotate();
+
+    /**
+     * The meta object literal for the '{@link pucrs.lp.turtle.turtle.impl.RepeatImpl <em>Repeat</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see pucrs.lp.turtle.turtle.impl.RepeatImpl
+     * @see pucrs.lp.turtle.turtle.impl.TurtlePackageImpl#getRepeat()
+     * @generated
+     */
+    EClass REPEAT = eINSTANCE.getRepeat();
+
+    /**
+     * The meta object literal for the '<em><b>Commands</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference REPEAT__COMMANDS = eINSTANCE.getRepeat_Commands();
 
   }
 

@@ -12,5 +12,10 @@
     <genClasses ecoreClass="Turtle.ecore#//Command">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Turtle.ecore#//Command/value"/>
     </genClasses>
+    <genClasses ecoreClass="Turtle.ecore#//Foward"/>
+    <genClasses ecoreClass="Turtle.ecore#//Rotate"/>
+    <genClasses ecoreClass="Turtle.ecore#//Repeat">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Turtle.ecore#//Repeat/commands"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

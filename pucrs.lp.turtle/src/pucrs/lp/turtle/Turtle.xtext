@@ -6,4 +6,11 @@ Model:
 	commands+=Command*;
 	
 Command:
-	'fd' value=INT;
+	Foward | Rotate | Repeat
+;
+
+Foward:'fd' value=INT;
+
+Rotate:'rt' value=INT;
+
+Repeat:'repeat' value=INT '[' commands+=Model ']';

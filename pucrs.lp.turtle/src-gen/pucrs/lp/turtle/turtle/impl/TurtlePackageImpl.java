@@ -11,7 +11,10 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import pucrs.lp.turtle.turtle.Command;
+import pucrs.lp.turtle.turtle.Foward;
 import pucrs.lp.turtle.turtle.Model;
+import pucrs.lp.turtle.turtle.Repeat;
+import pucrs.lp.turtle.turtle.Rotate;
 import pucrs.lp.turtle.turtle.TurtleFactory;
 import pucrs.lp.turtle.turtle.TurtlePackage;
 
@@ -36,6 +39,27 @@ public class TurtlePackageImpl extends EPackageImpl implements TurtlePackage
    * @generated
    */
   private EClass commandEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass fowardEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass rotateEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass repeatEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -145,6 +169,46 @@ public class TurtlePackageImpl extends EPackageImpl implements TurtlePackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getFoward()
+  {
+    return fowardEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getRotate()
+  {
+    return rotateEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getRepeat()
+  {
+    return repeatEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRepeat_Commands()
+  {
+    return (EReference)repeatEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public TurtleFactory getTurtleFactory()
   {
     return (TurtleFactory)getEFactoryInstance();
@@ -175,6 +239,13 @@ public class TurtlePackageImpl extends EPackageImpl implements TurtlePackage
 
     commandEClass = createEClass(COMMAND);
     createEAttribute(commandEClass, COMMAND__VALUE);
+
+    fowardEClass = createEClass(FOWARD);
+
+    rotateEClass = createEClass(ROTATE);
+
+    repeatEClass = createEClass(REPEAT);
+    createEReference(repeatEClass, REPEAT__COMMANDS);
   }
 
   /**
@@ -206,6 +277,9 @@ public class TurtlePackageImpl extends EPackageImpl implements TurtlePackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    fowardEClass.getESuperTypes().add(this.getCommand());
+    rotateEClass.getESuperTypes().add(this.getCommand());
+    repeatEClass.getESuperTypes().add(this.getCommand());
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -213,6 +287,13 @@ public class TurtlePackageImpl extends EPackageImpl implements TurtlePackage
 
     initEClass(commandEClass, Command.class, "Command", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCommand_Value(), ecorePackage.getEInt(), "value", null, 0, 1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(fowardEClass, Foward.class, "Foward", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(rotateEClass, Rotate.class, "Rotate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(repeatEClass, Repeat.class, "Repeat", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getRepeat_Commands(), this.getModel(), null, "commands", null, 0, -1, Repeat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

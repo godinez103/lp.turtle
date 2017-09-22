@@ -42,6 +42,33 @@ public interface TurtleFactory extends EFactory
   Command createCommand();
 
   /**
+   * Returns a new object of class '<em>Foward</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Foward</em>'.
+   * @generated
+   */
+  Foward createFoward();
+
+  /**
+   * Returns a new object of class '<em>Rotate</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Rotate</em>'.
+   * @generated
+   */
+  Rotate createRotate();
+
+  /**
+   * Returns a new object of class '<em>Repeat</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Repeat</em>'.
+   * @generated
+   */
+  Repeat createRepeat();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -112,19 +112,64 @@ ruleCommand returns [EObject current=null]
 	leaveRule();
 }:
 	(
+		{
+			newCompositeNode(grammarAccess.getCommandAccess().getFowardParserRuleCall_0());
+		}
+		this_Foward_0=ruleFoward
+		{
+			$current = $this_Foward_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getCommandAccess().getRotateParserRuleCall_1());
+		}
+		this_Rotate_1=ruleRotate
+		{
+			$current = $this_Rotate_1.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getCommandAccess().getRepeatParserRuleCall_2());
+		}
+		this_Repeat_2=ruleRepeat
+		{
+			$current = $this_Repeat_2.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
+;
+
+// Entry rule entryRuleFoward
+entryRuleFoward returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getFowardRule()); }
+	iv_ruleFoward=ruleFoward
+	{ $current=$iv_ruleFoward.current; }
+	EOF;
+
+// Rule Foward
+ruleFoward returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
 		otherlv_0='fd'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getCommandAccess().getFdKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getFowardAccess().getFdKeyword_0());
 		}
 		(
 			(
 				lv_value_1_0=RULE_INT
 				{
-					newLeafNode(lv_value_1_0, grammarAccess.getCommandAccess().getValueINTTerminalRuleCall_1_0());
+					newLeafNode(lv_value_1_0, grammarAccess.getFowardAccess().getValueINTTerminalRuleCall_1_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getCommandRule());
+						$current = createModelElement(grammarAccess.getFowardRule());
 					}
 					setWithLastConsumed(
 						$current,
@@ -134,6 +179,115 @@ ruleCommand returns [EObject current=null]
 				}
 			)
 		)
+	)
+;
+
+// Entry rule entryRuleRotate
+entryRuleRotate returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getRotateRule()); }
+	iv_ruleRotate=ruleRotate
+	{ $current=$iv_ruleRotate.current; }
+	EOF;
+
+// Rule Rotate
+ruleRotate returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='rt'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getRotateAccess().getRtKeyword_0());
+		}
+		(
+			(
+				lv_value_1_0=RULE_INT
+				{
+					newLeafNode(lv_value_1_0, grammarAccess.getRotateAccess().getValueINTTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getRotateRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"value",
+						lv_value_1_0,
+						"org.eclipse.xtext.common.Terminals.INT");
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleRepeat
+entryRuleRepeat returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getRepeatRule()); }
+	iv_ruleRepeat=ruleRepeat
+	{ $current=$iv_ruleRepeat.current; }
+	EOF;
+
+// Rule Repeat
+ruleRepeat returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='repeat'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getRepeatAccess().getRepeatKeyword_0());
+		}
+		(
+			(
+				lv_value_1_0=RULE_INT
+				{
+					newLeafNode(lv_value_1_0, grammarAccess.getRepeatAccess().getValueINTTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getRepeatRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"value",
+						lv_value_1_0,
+						"org.eclipse.xtext.common.Terminals.INT");
+				}
+			)
+		)
+		otherlv_2='['
+		{
+			newLeafNode(otherlv_2, grammarAccess.getRepeatAccess().getLeftSquareBracketKeyword_2());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getRepeatAccess().getCommandsModelParserRuleCall_3_0());
+				}
+				lv_commands_3_0=ruleModel
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getRepeatRule());
+					}
+					add(
+						$current,
+						"commands",
+						lv_commands_3_0,
+						"pucrs.lp.turtle.Turtle.Model");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_4=']'
+		{
+			newLeafNode(otherlv_4, grammarAccess.getRepeatAccess().getRightSquareBracketKeyword_4());
+		}
 	)
 ;
 
