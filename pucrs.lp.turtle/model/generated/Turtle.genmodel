@@ -7,10 +7,10 @@
   <genPackages prefix="Turtle" basePackage="pucrs.lp.turtle" disposableProviderFactory="true"
       fileExtensions="turtle" ecorePackage="Turtle.ecore#/">
     <genClasses ecoreClass="Turtle.ecore#//Model">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Turtle.ecore#//Model/greetings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Turtle.ecore#//Model/commands"/>
     </genClasses>
-    <genClasses ecoreClass="Turtle.ecore#//Greeting">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Turtle.ecore#//Greeting/name"/>
+    <genClasses ecoreClass="Turtle.ecore#//Command">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Turtle.ecore#//Command/value"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

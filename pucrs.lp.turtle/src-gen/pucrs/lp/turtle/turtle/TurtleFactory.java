@@ -33,13 +33,13 @@ public interface TurtleFactory extends EFactory
   Model createModel();
 
   /**
-   * Returns a new object of class '<em>Greeting</em>'.
+   * Returns a new object of class '<em>Command</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Greeting</em>'.
+   * @return a new object of class '<em>Command</em>'.
    * @generated
    */
-  Greeting createGreeting();
+  Command createCommand();
 
   /**
    * Returns the package supported by this factory.

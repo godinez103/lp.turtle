@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import pucrs.lp.turtle.turtle.Greeting;
+import pucrs.lp.turtle.turtle.Command;
 import pucrs.lp.turtle.turtle.Model;
 import pucrs.lp.turtle.turtle.TurtlePackage;
 
@@ -29,7 +29,7 @@ import pucrs.lp.turtle.turtle.TurtlePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link pucrs.lp.turtle.turtle.impl.ModelImpl#getGreetings <em>Greetings</em>}</li>
+ *   <li>{@link pucrs.lp.turtle.turtle.impl.ModelImpl#getCommands <em>Commands</em>}</li>
  * </ul>
  *
  * @generated
@@ -37,14 +37,14 @@ import pucrs.lp.turtle.turtle.TurtlePackage;
 public class ModelImpl extends MinimalEObjectImpl.Container implements Model
 {
   /**
-   * The cached value of the '{@link #getGreetings() <em>Greetings</em>}' containment reference list.
+   * The cached value of the '{@link #getCommands() <em>Commands</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getGreetings()
+   * @see #getCommands()
    * @generated
    * @ordered
    */
-  protected EList<Greeting> greetings;
+  protected EList<Command> commands;
 
   /**
    * <!-- begin-user-doc -->
@@ -72,13 +72,13 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Greeting> getGreetings()
+  public EList<Command> getCommands()
   {
-    if (greetings == null)
+    if (commands == null)
     {
-      greetings = new EObjectContainmentEList<Greeting>(Greeting.class, this, TurtlePackage.MODEL__GREETINGS);
+      commands = new EObjectContainmentEList<Command>(Command.class, this, TurtlePackage.MODEL__COMMANDS);
     }
-    return greetings;
+    return commands;
   }
 
   /**
@@ -91,8 +91,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case TurtlePackage.MODEL__GREETINGS:
-        return ((InternalEList<?>)getGreetings()).basicRemove(otherEnd, msgs);
+      case TurtlePackage.MODEL__COMMANDS:
+        return ((InternalEList<?>)getCommands()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -107,8 +107,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case TurtlePackage.MODEL__GREETINGS:
-        return getGreetings();
+      case TurtlePackage.MODEL__COMMANDS:
+        return getCommands();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -124,9 +124,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case TurtlePackage.MODEL__GREETINGS:
-        getGreetings().clear();
-        getGreetings().addAll((Collection<? extends Greeting>)newValue);
+      case TurtlePackage.MODEL__COMMANDS:
+        getCommands().clear();
+        getCommands().addAll((Collection<? extends Command>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -142,8 +142,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case TurtlePackage.MODEL__GREETINGS:
-        getGreetings().clear();
+      case TurtlePackage.MODEL__COMMANDS:
+        getCommands().clear();
         return;
     }
     super.eUnset(featureID);
@@ -159,8 +159,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case TurtlePackage.MODEL__GREETINGS:
-        return greetings != null && !greetings.isEmpty();
+      case TurtlePackage.MODEL__COMMANDS:
+        return commands != null && !commands.isEmpty();
     }
     return super.eIsSet(featureID);
   }

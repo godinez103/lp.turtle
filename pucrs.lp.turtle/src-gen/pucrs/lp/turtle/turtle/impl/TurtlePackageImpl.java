@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import pucrs.lp.turtle.turtle.Greeting;
+import pucrs.lp.turtle.turtle.Command;
 import pucrs.lp.turtle.turtle.Model;
 import pucrs.lp.turtle.turtle.TurtleFactory;
 import pucrs.lp.turtle.turtle.TurtlePackage;
@@ -35,7 +35,7 @@ public class TurtlePackageImpl extends EPackageImpl implements TurtlePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass greetingEClass = null;
+  private EClass commandEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -115,7 +115,7 @@ public class TurtlePackageImpl extends EPackageImpl implements TurtlePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_Greetings()
+  public EReference getModel_Commands()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(0);
   }
@@ -125,9 +125,9 @@ public class TurtlePackageImpl extends EPackageImpl implements TurtlePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getGreeting()
+  public EClass getCommand()
   {
-    return greetingEClass;
+    return commandEClass;
   }
 
   /**
@@ -135,9 +135,9 @@ public class TurtlePackageImpl extends EPackageImpl implements TurtlePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getGreeting_Name()
+  public EAttribute getCommand_Value()
   {
-    return (EAttribute)greetingEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)commandEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -171,10 +171,10 @@ public class TurtlePackageImpl extends EPackageImpl implements TurtlePackage
 
     // Create classes and their features
     modelEClass = createEClass(MODEL);
-    createEReference(modelEClass, MODEL__GREETINGS);
+    createEReference(modelEClass, MODEL__COMMANDS);
 
-    greetingEClass = createEClass(GREETING);
-    createEAttribute(greetingEClass, GREETING__NAME);
+    commandEClass = createEClass(COMMAND);
+    createEAttribute(commandEClass, COMMAND__VALUE);
   }
 
   /**
@@ -209,10 +209,10 @@ public class TurtlePackageImpl extends EPackageImpl implements TurtlePackage
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getModel_Greetings(), this.getGreeting(), null, "greetings", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Commands(), this.getCommand(), null, "commands", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(greetingEClass, Greeting.class, "Greeting", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getGreeting_Name(), ecorePackage.getEString(), "name", null, 0, 1, Greeting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(commandEClass, Command.class, "Command", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getCommand_Value(), ecorePackage.getEInt(), "value", null, 0, 1, Command.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

@@ -68,13 +68,13 @@ public interface TurtlePackage extends EPackage
   int MODEL = 0;
 
   /**
-   * The feature id for the '<em><b>Greetings</b></em>' containment reference list.
+   * The feature id for the '<em><b>Commands</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL__GREETINGS = 0;
+  int MODEL__COMMANDS = 0;
 
   /**
    * The number of structural features of the '<em>Model</em>' class.
@@ -86,32 +86,32 @@ public interface TurtlePackage extends EPackage
   int MODEL_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link pucrs.lp.turtle.turtle.impl.GreetingImpl <em>Greeting</em>}' class.
+   * The meta object id for the '{@link pucrs.lp.turtle.turtle.impl.CommandImpl <em>Command</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see pucrs.lp.turtle.turtle.impl.GreetingImpl
-   * @see pucrs.lp.turtle.turtle.impl.TurtlePackageImpl#getGreeting()
+   * @see pucrs.lp.turtle.turtle.impl.CommandImpl
+   * @see pucrs.lp.turtle.turtle.impl.TurtlePackageImpl#getCommand()
    * @generated
    */
-  int GREETING = 1;
+  int COMMAND = 1;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * The feature id for the '<em><b>Value</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GREETING__NAME = 0;
+  int COMMAND__VALUE = 0;
 
   /**
-   * The number of structural features of the '<em>Greeting</em>' class.
+   * The number of structural features of the '<em>Command</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GREETING_FEATURE_COUNT = 1;
+  int COMMAND_FEATURE_COUNT = 1;
 
 
   /**
@@ -125,36 +125,36 @@ public interface TurtlePackage extends EPackage
   EClass getModel();
 
   /**
-   * Returns the meta object for the containment reference list '{@link pucrs.lp.turtle.turtle.Model#getGreetings <em>Greetings</em>}'.
+   * Returns the meta object for the containment reference list '{@link pucrs.lp.turtle.turtle.Model#getCommands <em>Commands</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Greetings</em>'.
-   * @see pucrs.lp.turtle.turtle.Model#getGreetings()
+   * @return the meta object for the containment reference list '<em>Commands</em>'.
+   * @see pucrs.lp.turtle.turtle.Model#getCommands()
    * @see #getModel()
    * @generated
    */
-  EReference getModel_Greetings();
+  EReference getModel_Commands();
 
   /**
-   * Returns the meta object for class '{@link pucrs.lp.turtle.turtle.Greeting <em>Greeting</em>}'.
+   * Returns the meta object for class '{@link pucrs.lp.turtle.turtle.Command <em>Command</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Greeting</em>'.
-   * @see pucrs.lp.turtle.turtle.Greeting
+   * @return the meta object for class '<em>Command</em>'.
+   * @see pucrs.lp.turtle.turtle.Command
    * @generated
    */
-  EClass getGreeting();
+  EClass getCommand();
 
   /**
-   * Returns the meta object for the attribute '{@link pucrs.lp.turtle.turtle.Greeting#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link pucrs.lp.turtle.turtle.Command#getValue <em>Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see pucrs.lp.turtle.turtle.Greeting#getName()
-   * @see #getGreeting()
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see pucrs.lp.turtle.turtle.Command#getValue()
+   * @see #getCommand()
    * @generated
    */
-  EAttribute getGreeting_Name();
+  EAttribute getCommand_Value();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -190,30 +190,30 @@ public interface TurtlePackage extends EPackage
     EClass MODEL = eINSTANCE.getModel();
 
     /**
-     * The meta object literal for the '<em><b>Greetings</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Commands</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference MODEL__GREETINGS = eINSTANCE.getModel_Greetings();
+    EReference MODEL__COMMANDS = eINSTANCE.getModel_Commands();
 
     /**
-     * The meta object literal for the '{@link pucrs.lp.turtle.turtle.impl.GreetingImpl <em>Greeting</em>}' class.
+     * The meta object literal for the '{@link pucrs.lp.turtle.turtle.impl.CommandImpl <em>Command</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see pucrs.lp.turtle.turtle.impl.GreetingImpl
-     * @see pucrs.lp.turtle.turtle.impl.TurtlePackageImpl#getGreeting()
+     * @see pucrs.lp.turtle.turtle.impl.CommandImpl
+     * @see pucrs.lp.turtle.turtle.impl.TurtlePackageImpl#getCommand()
      * @generated
      */
-    EClass GREETING = eINSTANCE.getGreeting();
+    EClass COMMAND = eINSTANCE.getCommand();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute GREETING__NAME = eINSTANCE.getGreeting_Name();
+    EAttribute COMMAND__VALUE = eINSTANCE.getCommand_Value();
 
   }
 

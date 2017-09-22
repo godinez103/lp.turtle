@@ -3,7 +3,7 @@ grammar pucrs.lp.turtle.Turtle with org.eclipse.xtext.common.Terminals
 generate turtle "http://www.lp.pucrs/turtle/Turtle"
 
 Model:
-	greetings+=Greeting*;
+	commands+=Command*;
 	
-Greeting:
-	'Hello' name=ID '!';
+Command:
+	'fd' value=INT;

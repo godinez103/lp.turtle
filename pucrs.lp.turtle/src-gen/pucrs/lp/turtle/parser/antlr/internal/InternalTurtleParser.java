@@ -21,17 +21,16 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalTurtleParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Hello'", "'!'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'fd'"
     };
-    public static final int RULE_ID=4;
+    public static final int RULE_ID=5;
     public static final int RULE_WS=9;
     public static final int RULE_STRING=6;
     public static final int RULE_ANY_OTHER=10;
     public static final int RULE_SL_COMMENT=8;
-    public static final int RULE_INT=5;
+    public static final int RULE_INT=4;
     public static final int T__11=11;
     public static final int RULE_ML_COMMENT=7;
-    public static final int T__12=12;
     public static final int EOF=-1;
 
     // delegates
@@ -110,21 +109,21 @@ public class InternalTurtleParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleModel"
-    // InternalTurtle.g:71:1: ruleModel returns [EObject current=null] : ( (lv_greetings_0_0= ruleGreeting ) )* ;
+    // InternalTurtle.g:71:1: ruleModel returns [EObject current=null] : ( (lv_commands_0_0= ruleCommand ) )* ;
     public final EObject ruleModel() throws RecognitionException {
         EObject current = null;
 
-        EObject lv_greetings_0_0 = null;
+        EObject lv_commands_0_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalTurtle.g:77:2: ( ( (lv_greetings_0_0= ruleGreeting ) )* )
-            // InternalTurtle.g:78:2: ( (lv_greetings_0_0= ruleGreeting ) )*
+            // InternalTurtle.g:77:2: ( ( (lv_commands_0_0= ruleCommand ) )* )
+            // InternalTurtle.g:78:2: ( (lv_commands_0_0= ruleCommand ) )*
             {
-            // InternalTurtle.g:78:2: ( (lv_greetings_0_0= ruleGreeting ) )*
+            // InternalTurtle.g:78:2: ( (lv_commands_0_0= ruleCommand ) )*
             loop1:
             do {
                 int alt1=2;
@@ -137,16 +136,16 @@ public class InternalTurtleParser extends AbstractInternalAntlrParser {
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalTurtle.g:79:3: (lv_greetings_0_0= ruleGreeting )
+            	    // InternalTurtle.g:79:3: (lv_commands_0_0= ruleCommand )
             	    {
-            	    // InternalTurtle.g:79:3: (lv_greetings_0_0= ruleGreeting )
-            	    // InternalTurtle.g:80:4: lv_greetings_0_0= ruleGreeting
+            	    // InternalTurtle.g:79:3: (lv_commands_0_0= ruleCommand )
+            	    // InternalTurtle.g:80:4: lv_commands_0_0= ruleCommand
             	    {
 
-            	    				newCompositeNode(grammarAccess.getModelAccess().getGreetingsGreetingParserRuleCall_0());
+            	    				newCompositeNode(grammarAccess.getModelAccess().getCommandsCommandParserRuleCall_0());
             	    			
             	    pushFollow(FOLLOW_3);
-            	    lv_greetings_0_0=ruleGreeting();
+            	    lv_commands_0_0=ruleCommand();
 
             	    state._fsp--;
 
@@ -156,9 +155,9 @@ public class InternalTurtleParser extends AbstractInternalAntlrParser {
             	    				}
             	    				add(
             	    					current,
-            	    					"greetings",
-            	    					lv_greetings_0_0,
-            	    					"pucrs.lp.turtle.Turtle.Greeting");
+            	    					"commands",
+            	    					lv_commands_0_0,
+            	    					"pucrs.lp.turtle.Turtle.Command");
             	    				afterParserOrEnumRuleCall();
             	    			
 
@@ -192,25 +191,25 @@ public class InternalTurtleParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleModel"
 
 
-    // $ANTLR start "entryRuleGreeting"
-    // InternalTurtle.g:100:1: entryRuleGreeting returns [EObject current=null] : iv_ruleGreeting= ruleGreeting EOF ;
-    public final EObject entryRuleGreeting() throws RecognitionException {
+    // $ANTLR start "entryRuleCommand"
+    // InternalTurtle.g:100:1: entryRuleCommand returns [EObject current=null] : iv_ruleCommand= ruleCommand EOF ;
+    public final EObject entryRuleCommand() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleGreeting = null;
+        EObject iv_ruleCommand = null;
 
 
         try {
-            // InternalTurtle.g:100:49: (iv_ruleGreeting= ruleGreeting EOF )
-            // InternalTurtle.g:101:2: iv_ruleGreeting= ruleGreeting EOF
+            // InternalTurtle.g:100:48: (iv_ruleCommand= ruleCommand EOF )
+            // InternalTurtle.g:101:2: iv_ruleCommand= ruleCommand EOF
             {
-             newCompositeNode(grammarAccess.getGreetingRule()); 
+             newCompositeNode(grammarAccess.getCommandRule()); 
             pushFollow(FOLLOW_1);
-            iv_ruleGreeting=ruleGreeting();
+            iv_ruleCommand=ruleCommand();
 
             state._fsp--;
 
-             current =iv_ruleGreeting; 
+             current =iv_ruleCommand; 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -225,51 +224,50 @@ public class InternalTurtleParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleGreeting"
+    // $ANTLR end "entryRuleCommand"
 
 
-    // $ANTLR start "ruleGreeting"
-    // InternalTurtle.g:107:1: ruleGreeting returns [EObject current=null] : (otherlv_0= 'Hello' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '!' ) ;
-    public final EObject ruleGreeting() throws RecognitionException {
+    // $ANTLR start "ruleCommand"
+    // InternalTurtle.g:107:1: ruleCommand returns [EObject current=null] : (otherlv_0= 'fd' ( (lv_value_1_0= RULE_INT ) ) ) ;
+    public final EObject ruleCommand() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
-        Token lv_name_1_0=null;
-        Token otherlv_2=null;
+        Token lv_value_1_0=null;
 
 
         	enterRule();
 
         try {
-            // InternalTurtle.g:113:2: ( (otherlv_0= 'Hello' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '!' ) )
-            // InternalTurtle.g:114:2: (otherlv_0= 'Hello' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '!' )
+            // InternalTurtle.g:113:2: ( (otherlv_0= 'fd' ( (lv_value_1_0= RULE_INT ) ) ) )
+            // InternalTurtle.g:114:2: (otherlv_0= 'fd' ( (lv_value_1_0= RULE_INT ) ) )
             {
-            // InternalTurtle.g:114:2: (otherlv_0= 'Hello' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '!' )
-            // InternalTurtle.g:115:3: otherlv_0= 'Hello' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '!'
+            // InternalTurtle.g:114:2: (otherlv_0= 'fd' ( (lv_value_1_0= RULE_INT ) ) )
+            // InternalTurtle.g:115:3: otherlv_0= 'fd' ( (lv_value_1_0= RULE_INT ) )
             {
             otherlv_0=(Token)match(input,11,FOLLOW_4); 
 
-            			newLeafNode(otherlv_0, grammarAccess.getGreetingAccess().getHelloKeyword_0());
+            			newLeafNode(otherlv_0, grammarAccess.getCommandAccess().getFdKeyword_0());
             		
-            // InternalTurtle.g:119:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalTurtle.g:120:4: (lv_name_1_0= RULE_ID )
+            // InternalTurtle.g:119:3: ( (lv_value_1_0= RULE_INT ) )
+            // InternalTurtle.g:120:4: (lv_value_1_0= RULE_INT )
             {
-            // InternalTurtle.g:120:4: (lv_name_1_0= RULE_ID )
-            // InternalTurtle.g:121:5: lv_name_1_0= RULE_ID
+            // InternalTurtle.g:120:4: (lv_value_1_0= RULE_INT )
+            // InternalTurtle.g:121:5: lv_value_1_0= RULE_INT
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_5); 
+            lv_value_1_0=(Token)match(input,RULE_INT,FOLLOW_2); 
 
-            					newLeafNode(lv_name_1_0, grammarAccess.getGreetingAccess().getNameIDTerminalRuleCall_1_0());
+            					newLeafNode(lv_value_1_0, grammarAccess.getCommandAccess().getValueINTTerminalRuleCall_1_0());
             				
 
             					if (current==null) {
-            						current = createModelElement(grammarAccess.getGreetingRule());
+            						current = createModelElement(grammarAccess.getCommandRule());
             					}
             					setWithLastConsumed(
             						current,
-            						"name",
-            						lv_name_1_0,
-            						"org.eclipse.xtext.common.Terminals.ID");
+            						"value",
+            						lv_value_1_0,
+            						"org.eclipse.xtext.common.Terminals.INT");
             				
 
             }
@@ -277,10 +275,6 @@ public class InternalTurtleParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,12,FOLLOW_2); 
-
-            			newLeafNode(otherlv_2, grammarAccess.getGreetingAccess().getExclamationMarkKeyword_2());
-            		
 
             }
 
@@ -300,7 +294,7 @@ public class InternalTurtleParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleGreeting"
+    // $ANTLR end "ruleCommand"
 
     // Delegated rules
 
@@ -311,6 +305,5 @@ public class InternalTurtleParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000802L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000001000L});
 
 }

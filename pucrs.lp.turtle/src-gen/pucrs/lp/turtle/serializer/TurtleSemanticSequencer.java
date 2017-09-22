@@ -15,7 +15,7 @@ import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import pucrs.lp.turtle.services.TurtleGrammarAccess;
-import pucrs.lp.turtle.turtle.Greeting;
+import pucrs.lp.turtle.turtle.Command;
 import pucrs.lp.turtle.turtle.Model;
 import pucrs.lp.turtle.turtle.TurtlePackage;
 
@@ -33,8 +33,8 @@ public class TurtleSemanticSequencer extends AbstractDelegatingSemanticSequencer
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == TurtlePackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case TurtlePackage.GREETING:
-				sequence_Greeting(context, (Greeting) semanticObject); 
+			case TurtlePackage.COMMAND:
+				sequence_Command(context, (Command) semanticObject); 
 				return; 
 			case TurtlePackage.MODEL:
 				sequence_Model(context, (Model) semanticObject); 
@@ -46,18 +46,18 @@ public class TurtleSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
-	 *     Greeting returns Greeting
+	 *     Command returns Command
 	 *
 	 * Constraint:
-	 *     name=ID
+	 *     value=INT
 	 */
-	protected void sequence_Greeting(ISerializationContext context, Greeting semanticObject) {
+	protected void sequence_Command(ISerializationContext context, Command semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, TurtlePackage.Literals.GREETING__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TurtlePackage.Literals.GREETING__NAME));
+			if (transientValues.isValueTransient(semanticObject, TurtlePackage.Literals.COMMAND__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, TurtlePackage.Literals.COMMAND__VALUE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGreetingAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getCommandAccess().getValueINTTerminalRuleCall_1_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
@@ -67,7 +67,7 @@ public class TurtleSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     Model returns Model
 	 *
 	 * Constraint:
-	 *     greetings+=Greeting+
+	 *     commands+=Command+
 	 */
 	protected void sequence_Model(ISerializationContext context, Model semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -18,11 +18,11 @@ class TurtleParsingTest{
 
 	@Inject
 	ParseHelper<Model> parseHelper
-
-	@Test 
-	def void loadModel() {
+	
+	@Test
+	def void testFoward(){
 		val result = parseHelper.parse('''
-			Hello Xtext!
+			fd 30
 		''')
 		Assert.assertNotNull(result)
 	}

@@ -66,7 +66,7 @@ public class TurtleFactoryImpl extends EFactoryImpl implements TurtleFactory
     switch (eClass.getClassifierID())
     {
       case TurtlePackage.MODEL: return createModel();
-      case TurtlePackage.GREETING: return createGreeting();
+      case TurtlePackage.COMMAND: return createCommand();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -88,10 +88,10 @@ public class TurtleFactoryImpl extends EFactoryImpl implements TurtleFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Greeting createGreeting()
+  public Command createCommand()
   {
-    GreetingImpl greeting = new GreetingImpl();
-    return greeting;
+    CommandImpl command = new CommandImpl();
+    return command;
   }
 
   /**

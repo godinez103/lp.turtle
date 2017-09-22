@@ -81,9 +81,9 @@ public class TurtleAdapterFactory extends AdapterFactoryImpl
         return createModelAdapter();
       }
       @Override
-      public Adapter caseGreeting(Greeting object)
+      public Adapter caseCommand(Command object)
       {
-        return createGreetingAdapter();
+        return createCommandAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -123,16 +123,16 @@ public class TurtleAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link pucrs.lp.turtle.turtle.Greeting <em>Greeting</em>}'.
+   * Creates a new adapter for an object of class '{@link pucrs.lp.turtle.turtle.Command <em>Command</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see pucrs.lp.turtle.turtle.Greeting
+   * @see pucrs.lp.turtle.turtle.Command
    * @generated
    */
-  public Adapter createGreetingAdapter()
+  public Adapter createCommandAdapter()
   {
     return null;
   }

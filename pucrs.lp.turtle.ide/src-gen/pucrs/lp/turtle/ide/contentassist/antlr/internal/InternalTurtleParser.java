@@ -22,17 +22,16 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalTurtleParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Hello'", "'!'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'fd'"
     };
-    public static final int RULE_ID=4;
+    public static final int RULE_ID=5;
     public static final int RULE_WS=9;
     public static final int RULE_STRING=6;
     public static final int RULE_ANY_OTHER=10;
     public static final int RULE_SL_COMMENT=8;
-    public static final int RULE_INT=5;
+    public static final int RULE_INT=4;
     public static final int T__11=11;
     public static final int RULE_ML_COMMENT=7;
-    public static final int T__12=12;
     public static final int EOF=-1;
 
     // delegates
@@ -101,20 +100,20 @@ public class InternalTurtleParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleModel"
-    // InternalTurtle.g:62:1: ruleModel : ( ( rule__Model__GreetingsAssignment )* ) ;
+    // InternalTurtle.g:62:1: ruleModel : ( ( rule__Model__CommandsAssignment )* ) ;
     public final void ruleModel() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTurtle.g:66:2: ( ( ( rule__Model__GreetingsAssignment )* ) )
-            // InternalTurtle.g:67:2: ( ( rule__Model__GreetingsAssignment )* )
+            // InternalTurtle.g:66:2: ( ( ( rule__Model__CommandsAssignment )* ) )
+            // InternalTurtle.g:67:2: ( ( rule__Model__CommandsAssignment )* )
             {
-            // InternalTurtle.g:67:2: ( ( rule__Model__GreetingsAssignment )* )
-            // InternalTurtle.g:68:3: ( rule__Model__GreetingsAssignment )*
+            // InternalTurtle.g:67:2: ( ( rule__Model__CommandsAssignment )* )
+            // InternalTurtle.g:68:3: ( rule__Model__CommandsAssignment )*
             {
-             before(grammarAccess.getModelAccess().getGreetingsAssignment()); 
-            // InternalTurtle.g:69:3: ( rule__Model__GreetingsAssignment )*
+             before(grammarAccess.getModelAccess().getCommandsAssignment()); 
+            // InternalTurtle.g:69:3: ( rule__Model__CommandsAssignment )*
             loop1:
             do {
                 int alt1=2;
@@ -127,10 +126,10 @@ public class InternalTurtleParser extends AbstractInternalContentAssistParser {
 
                 switch (alt1) {
             	case 1 :
-            	    // InternalTurtle.g:69:4: rule__Model__GreetingsAssignment
+            	    // InternalTurtle.g:69:4: rule__Model__CommandsAssignment
             	    {
             	    pushFollow(FOLLOW_3);
-            	    rule__Model__GreetingsAssignment();
+            	    rule__Model__CommandsAssignment();
 
             	    state._fsp--;
 
@@ -143,7 +142,7 @@ public class InternalTurtleParser extends AbstractInternalContentAssistParser {
                 }
             } while (true);
 
-             after(grammarAccess.getModelAccess().getGreetingsAssignment()); 
+             after(grammarAccess.getModelAccess().getCommandsAssignment()); 
 
             }
 
@@ -165,20 +164,20 @@ public class InternalTurtleParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleModel"
 
 
-    // $ANTLR start "entryRuleGreeting"
-    // InternalTurtle.g:78:1: entryRuleGreeting : ruleGreeting EOF ;
-    public final void entryRuleGreeting() throws RecognitionException {
+    // $ANTLR start "entryRuleCommand"
+    // InternalTurtle.g:78:1: entryRuleCommand : ruleCommand EOF ;
+    public final void entryRuleCommand() throws RecognitionException {
         try {
-            // InternalTurtle.g:79:1: ( ruleGreeting EOF )
-            // InternalTurtle.g:80:1: ruleGreeting EOF
+            // InternalTurtle.g:79:1: ( ruleCommand EOF )
+            // InternalTurtle.g:80:1: ruleCommand EOF
             {
-             before(grammarAccess.getGreetingRule()); 
+             before(grammarAccess.getCommandRule()); 
             pushFollow(FOLLOW_1);
-            ruleGreeting();
+            ruleCommand();
 
             state._fsp--;
 
-             after(grammarAccess.getGreetingRule()); 
+             after(grammarAccess.getCommandRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -192,35 +191,35 @@ public class InternalTurtleParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleGreeting"
+    // $ANTLR end "entryRuleCommand"
 
 
-    // $ANTLR start "ruleGreeting"
-    // InternalTurtle.g:87:1: ruleGreeting : ( ( rule__Greeting__Group__0 ) ) ;
-    public final void ruleGreeting() throws RecognitionException {
+    // $ANTLR start "ruleCommand"
+    // InternalTurtle.g:87:1: ruleCommand : ( ( rule__Command__Group__0 ) ) ;
+    public final void ruleCommand() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTurtle.g:91:2: ( ( ( rule__Greeting__Group__0 ) ) )
-            // InternalTurtle.g:92:2: ( ( rule__Greeting__Group__0 ) )
+            // InternalTurtle.g:91:2: ( ( ( rule__Command__Group__0 ) ) )
+            // InternalTurtle.g:92:2: ( ( rule__Command__Group__0 ) )
             {
-            // InternalTurtle.g:92:2: ( ( rule__Greeting__Group__0 ) )
-            // InternalTurtle.g:93:3: ( rule__Greeting__Group__0 )
+            // InternalTurtle.g:92:2: ( ( rule__Command__Group__0 ) )
+            // InternalTurtle.g:93:3: ( rule__Command__Group__0 )
             {
-             before(grammarAccess.getGreetingAccess().getGroup()); 
-            // InternalTurtle.g:94:3: ( rule__Greeting__Group__0 )
-            // InternalTurtle.g:94:4: rule__Greeting__Group__0
+             before(grammarAccess.getCommandAccess().getGroup()); 
+            // InternalTurtle.g:94:3: ( rule__Command__Group__0 )
+            // InternalTurtle.g:94:4: rule__Command__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__Greeting__Group__0();
+            rule__Command__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getGreetingAccess().getGroup()); 
+             after(grammarAccess.getCommandAccess().getGroup()); 
 
             }
 
@@ -239,26 +238,26 @@ public class InternalTurtleParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleGreeting"
+    // $ANTLR end "ruleCommand"
 
 
-    // $ANTLR start "rule__Greeting__Group__0"
-    // InternalTurtle.g:102:1: rule__Greeting__Group__0 : rule__Greeting__Group__0__Impl rule__Greeting__Group__1 ;
-    public final void rule__Greeting__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__Command__Group__0"
+    // InternalTurtle.g:102:1: rule__Command__Group__0 : rule__Command__Group__0__Impl rule__Command__Group__1 ;
+    public final void rule__Command__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTurtle.g:106:1: ( rule__Greeting__Group__0__Impl rule__Greeting__Group__1 )
-            // InternalTurtle.g:107:2: rule__Greeting__Group__0__Impl rule__Greeting__Group__1
+            // InternalTurtle.g:106:1: ( rule__Command__Group__0__Impl rule__Command__Group__1 )
+            // InternalTurtle.g:107:2: rule__Command__Group__0__Impl rule__Command__Group__1
             {
             pushFollow(FOLLOW_4);
-            rule__Greeting__Group__0__Impl();
+            rule__Command__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Greeting__Group__1();
+            rule__Command__Group__1();
 
             state._fsp--;
 
@@ -277,25 +276,25 @@ public class InternalTurtleParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Group__0"
+    // $ANTLR end "rule__Command__Group__0"
 
 
-    // $ANTLR start "rule__Greeting__Group__0__Impl"
-    // InternalTurtle.g:114:1: rule__Greeting__Group__0__Impl : ( 'Hello' ) ;
-    public final void rule__Greeting__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Command__Group__0__Impl"
+    // InternalTurtle.g:114:1: rule__Command__Group__0__Impl : ( 'fd' ) ;
+    public final void rule__Command__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTurtle.g:118:1: ( ( 'Hello' ) )
-            // InternalTurtle.g:119:1: ( 'Hello' )
+            // InternalTurtle.g:118:1: ( ( 'fd' ) )
+            // InternalTurtle.g:119:1: ( 'fd' )
             {
-            // InternalTurtle.g:119:1: ( 'Hello' )
-            // InternalTurtle.g:120:2: 'Hello'
+            // InternalTurtle.g:119:1: ( 'fd' )
+            // InternalTurtle.g:120:2: 'fd'
             {
-             before(grammarAccess.getGreetingAccess().getHelloKeyword_0()); 
+             before(grammarAccess.getCommandAccess().getFdKeyword_0()); 
             match(input,11,FOLLOW_2); 
-             after(grammarAccess.getGreetingAccess().getHelloKeyword_0()); 
+             after(grammarAccess.getCommandAccess().getFdKeyword_0()); 
 
             }
 
@@ -314,75 +313,23 @@ public class InternalTurtleParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Group__0__Impl"
+    // $ANTLR end "rule__Command__Group__0__Impl"
 
 
-    // $ANTLR start "rule__Greeting__Group__1"
-    // InternalTurtle.g:129:1: rule__Greeting__Group__1 : rule__Greeting__Group__1__Impl rule__Greeting__Group__2 ;
-    public final void rule__Greeting__Group__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalTurtle.g:133:1: ( rule__Greeting__Group__1__Impl rule__Greeting__Group__2 )
-            // InternalTurtle.g:134:2: rule__Greeting__Group__1__Impl rule__Greeting__Group__2
-            {
-            pushFollow(FOLLOW_5);
-            rule__Greeting__Group__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Greeting__Group__2();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Greeting__Group__1"
-
-
-    // $ANTLR start "rule__Greeting__Group__1__Impl"
-    // InternalTurtle.g:141:1: rule__Greeting__Group__1__Impl : ( ( rule__Greeting__NameAssignment_1 ) ) ;
-    public final void rule__Greeting__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Command__Group__1"
+    // InternalTurtle.g:129:1: rule__Command__Group__1 : rule__Command__Group__1__Impl ;
+    public final void rule__Command__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTurtle.g:145:1: ( ( ( rule__Greeting__NameAssignment_1 ) ) )
-            // InternalTurtle.g:146:1: ( ( rule__Greeting__NameAssignment_1 ) )
-            {
-            // InternalTurtle.g:146:1: ( ( rule__Greeting__NameAssignment_1 ) )
-            // InternalTurtle.g:147:2: ( rule__Greeting__NameAssignment_1 )
-            {
-             before(grammarAccess.getGreetingAccess().getNameAssignment_1()); 
-            // InternalTurtle.g:148:2: ( rule__Greeting__NameAssignment_1 )
-            // InternalTurtle.g:148:3: rule__Greeting__NameAssignment_1
+            // InternalTurtle.g:133:1: ( rule__Command__Group__1__Impl )
+            // InternalTurtle.g:134:2: rule__Command__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__Greeting__NameAssignment_1();
+            rule__Command__Group__1__Impl();
 
             state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getGreetingAccess().getNameAssignment_1()); 
-
-            }
 
 
             }
@@ -399,58 +346,35 @@ public class InternalTurtleParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Group__1__Impl"
+    // $ANTLR end "rule__Command__Group__1"
 
 
-    // $ANTLR start "rule__Greeting__Group__2"
-    // InternalTurtle.g:156:1: rule__Greeting__Group__2 : rule__Greeting__Group__2__Impl ;
-    public final void rule__Greeting__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__Command__Group__1__Impl"
+    // InternalTurtle.g:140:1: rule__Command__Group__1__Impl : ( ( rule__Command__ValueAssignment_1 ) ) ;
+    public final void rule__Command__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTurtle.g:160:1: ( rule__Greeting__Group__2__Impl )
-            // InternalTurtle.g:161:2: rule__Greeting__Group__2__Impl
+            // InternalTurtle.g:144:1: ( ( ( rule__Command__ValueAssignment_1 ) ) )
+            // InternalTurtle.g:145:1: ( ( rule__Command__ValueAssignment_1 ) )
+            {
+            // InternalTurtle.g:145:1: ( ( rule__Command__ValueAssignment_1 ) )
+            // InternalTurtle.g:146:2: ( rule__Command__ValueAssignment_1 )
+            {
+             before(grammarAccess.getCommandAccess().getValueAssignment_1()); 
+            // InternalTurtle.g:147:2: ( rule__Command__ValueAssignment_1 )
+            // InternalTurtle.g:147:3: rule__Command__ValueAssignment_1
             {
             pushFollow(FOLLOW_2);
-            rule__Greeting__Group__2__Impl();
+            rule__Command__ValueAssignment_1();
 
             state._fsp--;
 
 
             }
 
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Greeting__Group__2"
-
-
-    // $ANTLR start "rule__Greeting__Group__2__Impl"
-    // InternalTurtle.g:167:1: rule__Greeting__Group__2__Impl : ( '!' ) ;
-    public final void rule__Greeting__Group__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalTurtle.g:171:1: ( ( '!' ) )
-            // InternalTurtle.g:172:1: ( '!' )
-            {
-            // InternalTurtle.g:172:1: ( '!' )
-            // InternalTurtle.g:173:2: '!'
-            {
-             before(grammarAccess.getGreetingAccess().getExclamationMarkKeyword_2()); 
-            match(input,12,FOLLOW_2); 
-             after(grammarAccess.getGreetingAccess().getExclamationMarkKeyword_2()); 
+             after(grammarAccess.getCommandAccess().getValueAssignment_1()); 
 
             }
 
@@ -469,29 +393,29 @@ public class InternalTurtleParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__Group__2__Impl"
+    // $ANTLR end "rule__Command__Group__1__Impl"
 
 
-    // $ANTLR start "rule__Model__GreetingsAssignment"
-    // InternalTurtle.g:183:1: rule__Model__GreetingsAssignment : ( ruleGreeting ) ;
-    public final void rule__Model__GreetingsAssignment() throws RecognitionException {
+    // $ANTLR start "rule__Model__CommandsAssignment"
+    // InternalTurtle.g:156:1: rule__Model__CommandsAssignment : ( ruleCommand ) ;
+    public final void rule__Model__CommandsAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTurtle.g:187:1: ( ( ruleGreeting ) )
-            // InternalTurtle.g:188:2: ( ruleGreeting )
+            // InternalTurtle.g:160:1: ( ( ruleCommand ) )
+            // InternalTurtle.g:161:2: ( ruleCommand )
             {
-            // InternalTurtle.g:188:2: ( ruleGreeting )
-            // InternalTurtle.g:189:3: ruleGreeting
+            // InternalTurtle.g:161:2: ( ruleCommand )
+            // InternalTurtle.g:162:3: ruleCommand
             {
-             before(grammarAccess.getModelAccess().getGreetingsGreetingParserRuleCall_0()); 
+             before(grammarAccess.getModelAccess().getCommandsCommandParserRuleCall_0()); 
             pushFollow(FOLLOW_2);
-            ruleGreeting();
+            ruleCommand();
 
             state._fsp--;
 
-             after(grammarAccess.getModelAccess().getGreetingsGreetingParserRuleCall_0()); 
+             after(grammarAccess.getModelAccess().getCommandsCommandParserRuleCall_0()); 
 
             }
 
@@ -510,25 +434,25 @@ public class InternalTurtleParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Model__GreetingsAssignment"
+    // $ANTLR end "rule__Model__CommandsAssignment"
 
 
-    // $ANTLR start "rule__Greeting__NameAssignment_1"
-    // InternalTurtle.g:198:1: rule__Greeting__NameAssignment_1 : ( RULE_ID ) ;
-    public final void rule__Greeting__NameAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Command__ValueAssignment_1"
+    // InternalTurtle.g:171:1: rule__Command__ValueAssignment_1 : ( RULE_INT ) ;
+    public final void rule__Command__ValueAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTurtle.g:202:1: ( ( RULE_ID ) )
-            // InternalTurtle.g:203:2: ( RULE_ID )
+            // InternalTurtle.g:175:1: ( ( RULE_INT ) )
+            // InternalTurtle.g:176:2: ( RULE_INT )
             {
-            // InternalTurtle.g:203:2: ( RULE_ID )
-            // InternalTurtle.g:204:3: RULE_ID
+            // InternalTurtle.g:176:2: ( RULE_INT )
+            // InternalTurtle.g:177:3: RULE_INT
             {
-             before(grammarAccess.getGreetingAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getGreetingAccess().getNameIDTerminalRuleCall_1_0()); 
+             before(grammarAccess.getCommandAccess().getValueINTTerminalRuleCall_1_0()); 
+            match(input,RULE_INT,FOLLOW_2); 
+             after(grammarAccess.getCommandAccess().getValueINTTerminalRuleCall_1_0()); 
 
             }
 
@@ -547,7 +471,7 @@ public class InternalTurtleParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Greeting__NameAssignment_1"
+    // $ANTLR end "rule__Command__ValueAssignment_1"
 
     // Delegated rules
 
@@ -558,6 +482,5 @@ public class InternalTurtleParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000802L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000001000L});
 
 }
