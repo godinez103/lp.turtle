@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: pucrs.lp.turtle
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: pucrs.lp.turtle; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.util,
+ org.eclipse.xtend.lib,
+ org.eclipse.emf.common
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: pucrs.lp.turtle.parser.antlr.internal,
+ pucrs.lp.turtle.validation,
+ pucrs.lp.turtle.turtle.impl,
+ pucrs.lp.turtle.scoping,
+ pucrs.lp.turtle.turtle,
+ pucrs.lp.turtle.turtle.util,
+ pucrs.lp.turtle.generator,
+ pucrs.lp.turtle,
+ pucrs.lp.turtle.services,
+ pucrs.lp.turtle.parser.antlr,
+ pucrs.lp.turtle.serializer
+Import-Package: org.apache.log4j
